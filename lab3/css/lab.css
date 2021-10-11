@@ -1,0 +1,32 @@
+body{
+  border: 1px solid white;
+  padding:10px;
+}
+
+h1 {
+  font-family: "coolvetica";
+  text-align: left;
+  padding-left: 25px;
+}
+
+p {
+  font-family: "bebas-neue";
+  font-size: 32px;
+  color: white;
+  text-align: left;
+  text-indent: 0px;
+  line-height: 1.5;
+  padding-left: 25px;
+}
+
+#caption-text {
+  font-family: "bebas-neue";
+  font-size: 32px;
+  padding-left: 25px;
+  color: white;
+  margin-bottom: 70px;
+}
+
+#image {
+  width: 800px;
+}

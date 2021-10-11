@@ -1,0 +1,36 @@
+body{
+  background-color: linen;
+}
+
+h1 {
+  background-color: peachpuff;
+  font-size: 100px;
+  font-family: "impact";
+  color:darkslategray;
+  padding: 25px;
+  text-align: center;
+}
+
+p{
+  font-size: 30px;
+  font-family: "helvetica";
+  color: black;
+}
+
+#p1{
+  text-align:center;
+}
+
+#p2{
+  text-align:center;
+  text-indent:70px;
+}
+
+#content{
+  background-color: oldlace;
+  border:15px;
+  border-radius: 5px;
+  border-color: black;
+  border-spacing: 5px;
+  border-style:dotted;
+}

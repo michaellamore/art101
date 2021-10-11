@@ -1,0 +1,167 @@
+main{
+  border: 1px solid white;
+  padding:10px;
+}
+
+body{
+  background-color: #242424;
+}
+
+.introductions-section {
+  border: 1px solid white;
+  padding: 200px;
+  padding-top: 25px;
+  margin-bottom: 50px;
+}
+
+.assignments-section {
+  border: 1px solid white;
+  padding: 200px;
+  padding-top: 25px;
+}
+
+.square-one {
+  height: 500px;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: -1;
+  background-color: #202020;
+  animation-name: rotateRight;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.square-two {
+  height: 400px;
+  width: 400px;
+  top: 20%;
+  left: 10%;
+  position: absolute;
+  transform-origin: 50px 50px;
+  z-index: -1;
+  background-color: #202020;
+  animation-name: rotateLeft;
+  animation-duration: 90s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.square-three {
+  height: 400px;
+  width: 400px;
+  top: 180%;
+  left: 10%;
+  position: absolute;
+  z-index: -1;
+  background-color: #202020;
+  animation-name: rotateRight;
+  animation-duration: 90s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.square-four {
+  height: 250px;
+  width: 250px;
+  top: 185%;
+  left: 80%;
+  position: absolute;
+  transform-origin: 100px 50px;
+  z-index: -1;
+  background-color: #202020;
+  animation-name: rotateLeft;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.square-five {
+  height: 100px;
+  width: 100px;
+  top: 130%;
+  left: 50%;
+  position: absolute;
+  transform-origin: 100px 100px;
+  z-index: -1;
+  background-color: #202020;
+  animation-name: rotateRight;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+h1 {
+  font-family: "coolvetica";
+  font-size: 150px;
+  color: white;
+  text-align: right;
+  letter-spacing: 10px;
+}
+
+p {
+  font-family: "bebas-neue";
+  font-size: 32px;
+  color: white;
+  text-align: justify;
+  text-indent: 50px;
+  line-height: 1.5
+}
+
+h2 {
+  font-family: "coolvetica";
+  font-size: 150px;
+  letter-spacing: 10px;
+  color: white;
+  text-align: right;
+}
+
+ul {
+  font-family: "bebas-neue";
+  font-size: 32px;
+  line-height: 1.5;
+  color: white;
+  text-align: right;
+  direction: rtl;
+}
+
+#float-image{
+  padding: 100px;
+  float: right;
+}
+
+#michael-portrait {
+  padding-top: 80px;
+  width: 500px;
+}
+
+/*
+fontface code based off of mostafaznv on StackOverflow
+https://stackoverflow.com/questions/24113967/how-to-add-new-fonts-in-css-for-local-testing
+*/
+
+@font-face {
+  font-family: 'bebas-neue';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/bebasneue.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'coolvetica';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/coolvetica.ttf') format('truetype');
+}
+
+/* shape animation code based off of Sahar Jazebi on CodePen
+https://codepen.io/saharjzb/pen/LpPGxQ
+*/
+
+@keyframes rotateRight {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+
+@keyframes rotateLeft {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(-360deg);}
+}
