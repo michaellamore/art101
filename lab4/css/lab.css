@@ -1,0 +1,65 @@
+#lab4head{
+  background-color:#314552;
+  color:mintcream;
+  padding:50px;
+  font-size:50px;
+  font-family:Helvetica;
+}
+#info{
+  padding:50px;
+  padding-top:5px;
+  margin-left: 200px;
+  margin-right:200px;
+
+}
+#indent{
+  margin-left: 40px;
+}
+#computer-task-section{
+  font-family:arial;
+  font-size:18px;
+}
+#everyday-task-section{
+  font-family:arial;
+  font-size:18px;
+  line-height:28px;
+}
+#computer-task-outline{
+  font-family:arial;
+  font-size:18px;
+  padding-bottom:5px;
+}
+#everydaytask{
+  padding-top:5px;
+}
+#computertask{
+  padding-top:5px;
+}
+h1{
+  font-family:Helvetica;
+}
+h2{
+  font-family:helvetica;
+}
+h3{
+  font-family:helvetica;
+  color:#404040;
+}
+p{
+  font-family:arial;
+  font-size:18px;
+}
+#names{
+  font-weight:bold;
+  font-style:italic;
+}
+#results{
+background-color:lightblue;
+padding:8px;
+}
+#pseudo{
+  padding-top:0px;
+}
+#code{
+  font-size:18px;
+}

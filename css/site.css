@@ -1,20 +1,20 @@
-main{
+main.main-homepage{
   border: 1px solid white;
   padding:10px;
 }
 
-body{
+body.body-homepage{
   background-color: #242424;
 }
 
-.introductions-section {
+.introductions-section-homepage {
   border: 1px solid white;
   padding: 200px;
   padding-top: 25px;
   margin-bottom: 50px;
 }
 
-.assignments-section {
+.assignments-section-homepage {
   border: 1px solid white;
   padding: 200px;
   padding-top: 25px;
@@ -89,7 +89,7 @@ body{
   animation-iteration-count: infinite;
 }
 
-h1 {
+h1#header-homepage {
   font-family: "coolvetica";
   font-size: 150px;
   color: white;
@@ -97,7 +97,7 @@ h1 {
   letter-spacing: 10px;
 }
 
-p {
+p#p-homepage {
   font-family: "bebas-neue";
   font-size: 32px;
   color: white;
@@ -106,7 +106,7 @@ p {
   line-height: 1.5
 }
 
-h2 {
+h2#header-homepage {
   font-family: "coolvetica";
   font-size: 150px;
   letter-spacing: 10px;
@@ -114,7 +114,7 @@ h2 {
   text-align: right;
 }
 
-ul {
+ul#ul-homepage {
   font-family: "bebas-neue";
   font-size: 32px;
   line-height: 1.5;
@@ -143,7 +143,7 @@ a:active{
   color: #d1d1d1 /* light grey */
 }
 
-#float-image{
+#float-image-homepage{
   padding: 100px;
   float: right;
 }

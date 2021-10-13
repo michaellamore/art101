@@ -6,53 +6,86 @@
 	<link rel = "stylesheet" type = "text/css" href = "css/lab.css">
 </head>
 <body>
-	<h1> Challenge </h1>
-	<p> This lab is all about training us to think in terms of pseudocoding before coding. Pseudocode is helpful for outlining what exactly the code needs to do to achieve a desired result.</p>
+	<h1 id="lab4head">Lab 4 - Pseudocoding</h1>
+	<div id="info">
+		<h1> Challenge </h1>
+		<p> This lab is all about training us to think in terms of pseudocoding before coding. Pseudocode is helpful for outlining what exactly the code needs to do to achieve a desired result.</p>
 
-	<h1> Problems </h1>
-	<p> A small hiccup I came across when working on the everyday task outline, was that I was not sure how to nest an ordered list within an ordered list. In the outline, I wanted 'major steps' and 'minor steps' to follow, which meant I needed to learn how to nest lists in HTML. </p>
+		<h1> Problems </h1>
+		<p> A small hiccup I came across when working on the everyday task outline, was that I was not sure how to nest an ordered list within an ordered list. In the outline, I wanted 'major steps' and 'minor steps' to follow, which meant I needed to learn how to nest lists in HTML.<span id="names">- Michael</span></p>
+		<p> I too had the same problem with creating a combined ordered list and an unordered list. I also had some problems making the outline easy to understand and organized as much as possible without being too detailed.<span id="names">- Jenna</span></p>
 
-	<h1> Results </h1>
-	<p>  As you can see, I was able to outline the everyday task within the html, and nest ordered lists within one another. I did this through the 'ol' tag and 'li' tags for each element within the list, and adding another 'ol' tag whenever I needed to nest a new list. I was also able to create a step-by-step process for creating orange chicken, outlined in a way that is similar to pseudocode for coding. </p>
-	<div id = "everyday-task-section">
-		<h2> Outline an everyday task </h2>
+		<h1> Results </h1>
+		<div id = "everyday-task-section">
+			<h2 id="everydaytask"> Outline an everyday task </h2>
+			<h3> Top-secret recipe to make crazy good orange chicken at home </h3>
+			<ol id = "everyday-task-outline">
+				<li> Make the sauce
+					<ol>
+						<li> Mix 3/4 cup of granulated sugar and 3/4 cup of white vinegar onto a heated saucepan. </li>
+						<li> Add 1/3 cup + 1 tbsp of soy sauce and 1/4 cup of water onto the mixture. </li>
+						<li> Add 1 orange's zest and juice, then mix. </li>
+						<li> Once the sauce starts to boil over high heat, reduce the heat to medium. </li>
+						<li> Let it simmer for 8-10 minutes. </li>
+						<li> Separately, mix 1 tbsp of cornstarch with 1 tbsp of water, then whisk it into the saucepan. </li>
+						<li> Let it simmer until the sauce thickens. </li>
+						<li> Add some grated cloves of garlic and ginger, then let it steep. </li>
+					</ol>
+				</li>
+				<li> Make the chicken
+					<ol>
+						<li> Combine 1 cup of cornstarch with 1/2 cup of flour onto a bowl. </li>
+						<li> Whisk two eggs together in a separate bowl. </li>
+						<li> Cut 1 + 1/2 lbs of chicken thighs into the bite-sized pieces, and lightly season with salt. </li>
+						<li> Mix the chicken pieces onto the cornstarch and flour, then onto the eggs, and back onto the cornstarch mixture. </li>
+						<li> Heat some oil until it is boiling hot, and fry the chicken pieces for 3-5 minutes until they are golden brown. </li>
+					</ol>
+				</li>
+				<li> Combine the chicken with the sauce! </li>
+			</ol>
+		</div>
 
-		<h3> Top-secret recipe to make crazy good orange chicken at home </h3>
-		<ol id = "everyday-task-outline">
-			<li> Make the sauce
-				<ol>
-					<li> Mix 3/4 cup of granulated sugar and 3/4 cup of white vinegar onto a heated saucepan. </li>
-					<li> Add 1/3 cup + 1 tbsp of soy sauce and 1/4 cup of water onto the mixture. </li>
-					<li> Add 1 orange's zest and juice, then mix. </li>
-					<li> Once the sauce starts to boil over high heat, reduce the heat to medium. </li>
-					<li> Let it simmer for 8-10 minutes. </li>
-					<li> Separately, mix 1 tbsp of cornstarch with 1 tbsp of water, then whisk it into the saucepan. </li>
-					<li> Let it simmer until the sauce thickens. </li>
-					<li> Add some grated cloves of garlic and ginger, then let it steep. </li>
-				</ol>
-			</li>
-			<li> Make the chicken </li>
-				<ol>
-					<li> Combine 1 cup of cornstarch with 1/2 cup of flour onto a bowl. </li>
-					<li> Whisk two eggs together in a separate bowl. </li>
-					<li> Cut 1 + 1/2 lbs of chicken thighs into the bite-sized pieces, and lightly season with salt. </li>
-					<li> Mix the chicken pieces onto the cornstarch and flour, then onto the eggs, and back onto the cornstarch mixture. </li>
-					<li> Heat some oil until it is boiling hot, and fry the chicken pieces for 3-5 minutes until they are golden brown. </li>
-				</ol>
-			<li> Combine the chicken with the sauce! </li>
-		</ol>
+		<p id="results">  As you can see, I was able to outline the everyday task within the html, and nest ordered lists within one another. I did this through the 'ol' tag and 'li' tags for each element within the list, and adding another 'ol' tag whenever I needed to nest a new list. I was also able to create a step-by-step process for creating orange chicken, outlined in a way that is similar to pseudocode for coding.<span id="names">- Michael<span></p>
+
+		<div id = "computer-task-section">
+			<h2 id="computertask"> Outline of Computer Task</h2>
+				<h3> Creating a Checkers Game</h3>
+				<ul id="computer-task-outline">
+					<li>Print out a board</li>
+					<li>Place pieces on board</li>
+					<li id="indent">12 black pieces</li>
+					<li id="indent">12 white pieces</li>
+					<li>Validated users color</li>
+					<li> Black goes first</li>
+					<li>Validate users move</li>
+					<li id="indent">Pieces can only move diagonally forward</li>
+					<li>Capture opponent's checker by jumping adjacent checkers</li>
+					<li>When a checker reaches the first row it becomes a king</li>
+				  <li id="indent">Checker can now move diagonally forward or backwards</li>
+					<li>First to capture all of opponents checker wins</li>
+				</ul>
+		</div>
+
+		<p id="results"> I created a computer task of creating a checkers game. I figured out how to organize the list by using a "unordered list" with margin indents to create the outline "look and feel". I seperated the steps by important tasks and some with subtasks. I used my outline to then create a pseudocode and imbeded it from the JavaScript file.<span id="names">- Jenna</span></p>
+
+		<div id="code">
+			<h2 id="pseudo"> Pseudocode of Computer Task </h2>
+			<pre><code>
+				// Creating a checkers game:
+				// Print out a board
+				// Place pieces on board
+				    // 12 black pieces
+				    // 12 white pieces
+				// Validated users color
+				// Black goes first
+				// Validate users move
+				    // Pieces can only move diagonally forward
+				// Capture opponent's checker by jumping adjacent checkers
+				// When a checker reaches the first row it becomes a king
+				    // Checker can now move diagonally forward or backwards
+				//First to capture all of opponents checker wins
+			</pre></code>
+		</div>
 	</div>
-
-	<p> <!--- talk about results here ---> </p>
-	<div id = "computer-task-section">
-		<h2> Outline a computer task </h2>
-		<!--- outline here --->
-
-		<h2> Pseudocode a computer task </h2>
-		<pre><code>
-			//computer pseudocode here
-		</pre></code>
-	</div>
-
 </body>
 </html>

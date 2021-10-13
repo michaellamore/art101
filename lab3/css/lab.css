@@ -1,22 +1,28 @@
 body{
   border: 1px solid white;
   padding:10px;
+  background-color: #242424;
+  width: 2300px;
 }
 
 h1 {
   font-family: "coolvetica";
+  font-size: 100px;
+  color: white;
   text-align: left;
+  letter-spacing: 5px;
   padding-left: 25px;
 }
 
 p {
   font-family: "bebas-neue";
-  font-size: 32px;
+  font-size: 40px;
   color: white;
   text-align: left;
   text-indent: 0px;
   line-height: 1.5;
   padding-left: 25px;
+  width: 2000px;
 }
 
 #caption-text {
