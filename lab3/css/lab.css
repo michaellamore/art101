@@ -2,37 +2,38 @@ body{
   border: 1px solid white;
   padding:10px;
   background-color: #242424;
-  width: 2300px;
+  width: 1100px;
 }
 
 h1 {
   font-family: "coolvetica";
-  font-size: 100px;
+  font-size: 50px;
   color: white;
   text-align: left;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   padding-left: 25px;
 }
 
 p {
   font-family: "bebas-neue";
-  font-size: 40px;
+  font-size: 20px;
   color: white;
   text-align: left;
   text-indent: 0px;
   line-height: 1.5;
   padding-left: 25px;
-  width: 2000px;
+  width: 1000px;
 }
 
 #caption-text {
   font-family: "bebas-neue";
   font-size: 32px;
-  padding-left: 25px;
+  padding-left: 150px;
   color: white;
   margin-bottom: 70px;
 }
 
 #image {
   width: 800px;
+  padding-left: 150px;
 }
