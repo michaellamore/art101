@@ -50,7 +50,7 @@ body{
 .square-three {
   height: 400px;
   width: 400px;
-  top: 180%;
+  top: 170%;
   left: 10%;
   position: absolute;
   z-index: -1;
@@ -121,6 +121,14 @@ ul {
   color: white;
   text-align: right;
   direction: rtl;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #8c30a1
 }
 
 #float-image{
