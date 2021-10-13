@@ -54,8 +54,8 @@ p{
   font-style:italic;
 }
 #results{
-background-color:lightblue;
-padding:8px;
+  background-color: lightblue;
+  padding:8px;
 }
 #pseudo{
   padding-top:0px;
