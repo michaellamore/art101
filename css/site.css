@@ -128,7 +128,19 @@ a {
 }
 
 a:visited {
-  color: #8c30a1
+  color: #8c30a1 /* light purple */
+}
+
+a:hover {
+  color: white
+}
+
+a:link {
+  color: #58c3ed /* light blue */
+}
+
+a:active{
+  color: #d1d1d1 /* light grey */
 }
 
 #float-image{
