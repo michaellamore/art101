@@ -1,0 +1,61 @@
+.output {
+  font-family: bebas-neue;
+  font-size: 20px;
+}
+
+body {
+  border: 1px solid white;
+  padding: 20px;
+  background-color: #242424;
+  width: 1100px;
+  margin: auto;
+}
+
+h1 {
+  font-family: coolvetica;
+  font-size: 80px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: coolvetica;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-family: coolvetica;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+p {
+  font-family: bebas-neue;
+  font-size: 25px;
+  width: 1000px;
+}
+
+#content {
+  color: white;
+}
+
+#output {
+  background-color: #822222;
+  border-radius: 10px;
+  display: inline-grid;
+  grid-column-gap: 50px;
+  width: 700px;
+  margin-left: 200px;
+}
+
+#output-header {
+  margin: 10px;
+}
+
+#unordered-list {
+  font-family: bebas-neue;
+  font-size: 20px;
+  grid-row-end: 6;
+}
