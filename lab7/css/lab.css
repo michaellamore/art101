@@ -28,6 +28,7 @@ h3 {
   font-family: coolvetica;
   font-size: 30px;
   letter-spacing: 1.5px;
+  text-align: center;
 }
 
 p {
@@ -40,12 +41,30 @@ p {
   color: white;
 }
 
-#car-image {
-  width: 440px;
-  float: left;
+#script-output {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #F03C33;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+  padding-top: 1px;
+}
+#output-text {
+  text-align: center;
+  font-size: 60px;
   margin: 10px;
 }
 
-#output-area {
-  margin-left: 50px;
+#output-p {
+  background-color: white;
+  color: #242424;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 500px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+
 }
