@@ -1,0 +1,62 @@
+body {
+border: 1px solid white;
+padding: 20px;
+background-color: #242424;
+width: 1100px;
+margin: auto;
+}
+
+h1 {
+font-family: coolvetica;
+font-size: 80px;
+color: white;
+letter-spacing: 2px;
+}
+
+h2 {
+font-family: coolvetica;
+font-size: 50px;
+letter-spacing: 2px;
+}
+
+h3 {
+font-family: coolvetica;
+font-size: 30px;
+letter-spacing: 1.5px;
+}
+
+p {
+font-family: bebas-neue;
+font-size: 25px;
+width: 1000px;
+}
+
+#content {
+color: white;
+}
+
+#output {
+border: 1px solid white;
+border-radius: 10px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+width: 200px;
+padding: 20px;
+text-align: center;
+}
+
+#output-header {
+margin: 10px;
+}
+
+.output-container{
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    display: block;
+    width: 600px;
+}
