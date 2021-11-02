@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #242424;
+  color: white;
+  border: solid .1vw white;
+  border-radius: 5px;
+  flex-direction: column;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3{
+  font-family: coolvetica;
+}
+h1 {
+  font-size: 4vw;
+  letter-spacing: .1vw;
+  text-align: center;
+}
+h2 {
+  font-size: 3vw;
+  letter-spacing: 2px;
+}
+h3 {
+  font-size: 2vw;
+  letter-spacing: 1px;
+}
+
+p,label,button {
+  font-family: poppins;
+  font-size: 1.5vw;
+}
+
+section#challenge {
+  position: relative;
+}
+section#challenge img{
+  padding-top: 3vw;
+  width: 100%;
+  height: auto;
+}
+#challengeContainer {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  top: 11vw;
+  left: 22vw;
+  text-align: left;
+  border-radius: 1vw;
+  background-color: rgba(99, 75, 43, 0.3);
+  box-shadow: 0 0 2vw .5vw rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+}
+#challengeContainer h2{
+  text-align: center;
+}
+#challengeContainer p{
+  text-align: left;
+  padding: 1vw;
+}
+
+section#problems {
+  position: relative;
+}
+section#problems img{
+  padding-top: 3vw;
+  width: 100%;
+  height: auto;
+}
+#problemsContainer {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  top: 10vw;
+  left: 2vw;
+  text-align: left;
+  border-radius: 1vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 2vw .5vw rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+}
+#problemsContainer h2{
+  text-align: center;
+}
+#problemsContainer p{
+  text-align: left;
+  padding: 1vw;
+  font-size: 1vw;
+}
+
+
+#results{
+  padding: 2vw;
+}
+#inputName{
+  display: flexbox;
+  flex-direction: column;
+}
+section#results h2{
+  text-align: center;
+  padding-top: 2vw;
+}
+section#results h3, #inputRadio{
+  text-align: left;
+}
+input[type=radio]{
+  border: 0px;
+  height: 1vw;
+}
+input[type=text]{
+  height: 1.7vw;
+  width: 15vw;
+}
+button{
+  width: 20%;
+  height: auto;
+  font-size: .85vw;
+}
+#output{
+  padding-top: 3vw;
+}
+#nameLabel{
+  padding-right: 5vw;
+}

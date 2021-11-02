@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Lab 10: JavaScript Events and Forms </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="css/lab.css">
+  <script src="js/lab.js" defer></script>
+</head>
+<body>
+  <h1> Lab 10: JavaScript Events and Forms </h1>
+
+  <section id="challenge">
+    <img src="/img/city.jpg" alt="Picture of a city">
+    <div id="challengeContainer">
+      <h2> Challenge </h2>
+      <p> For this lab, we practiced more JavaScript. More specifically, we learned more about JS events and how to use event listeners </p>
+    </div>
+  </section>
+
+  <section id="problems">
+    <img src="/img/streets.jpg" alt="Picture of a street">
+    <div id="problemsContainer">
+      <h2> Problems </h2>
+      <p> I was a little confused with this lab, because we had to manually add event listeners in order to use the button to do something. The button already has something built-in like that called "onclick", but I still used event listeners for the lab. I also tried learning more about different types of input, and changing up how my site looks. </p>
+    </div>
+  </section>
+
+  <section id="results">
+    <h2> Results </h2>
+    <p>  </p>
+
+    <h3> How would you like to sort your name? </h3>
+    <div id="inputRadio">
+      <form>
+        <label for="sortName"> Normal </label>
+        <input type="radio" name="radio" id="sortName" checked="checked">
+
+        <label for="sortNameIgnoreCaps"> Ignore Caps </label>
+        <input type="radio" name="radio" id="sortNameIgnoreCaps">
+      </form>
+    </div>
+
+    <div id="inputName">
+      <label for="userName" id="nameLabel"> What name would you like to edit? </label>
+      <input type="text" name="userName" id="userName" maxlength="20" placeholder="Name">
+      <button id="button"> Change my name! </button>
+    </div>
+
+    <div id="output"></div>
+  </section>
+</body>
+</html>
