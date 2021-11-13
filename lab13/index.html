@@ -4,13 +4,69 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Lab 12: Conditionals </title>
+  <title> Lab 13: Loops </title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/site.css">
   <link rel="stylesheet" href="css/lab.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="js/lab.js" defer></script>
 </head>
 <body>
-  
+  <h1> Lab 13: Loops </h1>
+
+  <section id="challenge">
+    <div id="challengeContainer">
+      <h2> Challenge </h2>
+      <p> The challenge for this lab was to use loops in order to iterate using a max number, and be able to print all the numbers onto the HTML. We're also experimenting with iterators, string manipulation, and being able to output things onto the document through javascript.</p>
+    </div>
+  </section>
+
+  <section id="problems">
+    <div id="problemsContainer">
+      <h2> Problems </h2>
+      <p> The lab itself was simple enough to follow. I've already experimented with for loops before. The trouble I had stemmed from the fact that I haven't used tables before, and having to use them was a bit of a learning curve for me. I also didn't have much time to do this lab because of other time commitments I had to do, so the code is not pretty. Very hard to read, I would have to work on that for future labs.</p>
+    </div>
+  </section>
+
+  <section id="results">
+    <div id="resultsContainer">
+      <h2> Results </h2>
+      <p> As you can see, you're able to input the max number, what multiples you want to target, as well as what you want the code to output for those multiples. The code is not clean, I essentially hard coded everything other than iterating through the max number (that part uses a for loop). In the future, if I want to revisit this again, I would definitely try to make it so that the user gets to choose how many multiples they want to target. I would also create a function to clear the output before appending new children to it, because right now there's a lot of if-statements that could easily be solved if I had more time. Because I had other projects to do, I was only able to do the requirements for the lab rather than experimenting with more things. </br></br> In any case, here's the finished product: </p>
+    </div>
+
+    <div id="inputContainer">
+      <label for="maxNumber"> What should the max number be? </label>
+      <input type="number" name="maxNumber" id="maxNumberInput" min=0 max=1000>
+      <table>
+        <tr>
+          <th> Factor </th>
+          <th> What should it print? </th>
+        </tr>
+        <tr>
+          <td><input type="number" id="number0" min=0 max=50></td>
+          <td><input type="text" id="string0"></td>
+        </tr>
+        <tr>
+          <td><input type="number" id="number1" min=0 max=50></td>
+          <td><input type="text" id="string1"></td>
+        </tr>
+        <tr>
+          <td><input type="number" id="number2" min=0 max=50></td>
+          <td><input type="text" id="string2"></td>
+        </tr>
+        <tr>
+          <td><input type="number" id="number3" min=0 max=50></td>
+          <td><input type="text" id="string3"></td>
+        </tr>
+      </table>
+      <button id="runButton"> Run the Code </button>
+    </div>
+  </section>
+
+  <section id="output">
+    <h2> Output </h2>
+    <div id="outputColumns"></table>
+  </section>
+
 </body>
 </html>
