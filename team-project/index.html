@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> PROJECT WORKING PROTOTYPE </title>
+
+  <!-- ========== FONTS & STYLES ========== -->
+  <link href="http://fonts.cdnfonts.com/css/brandon-grotesque-regular" rel="stylesheet">
+  <link rel="stylesheet" href="./css/project.css">
+
+  <!-- ========== jQuery & p5.js ========== -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./js/p5.js"></script>
+</head>
+
+<body>
+  <div id="container-sections">
+
+    <div id="container-hero">
+      <h1 class="header-hero"> CREATE A MASTERPIECE </h1>
+      <a href="#container-script"> LET'S DO IT </a>
+      <a href="#container-details"> LEARN MORE </a>
+    </div>
+
+    <div id="container-details">
+      <img src="./img/statueOfDavid.svg" alt="Statue of David Vector">
+      <p id="p-details">
+        <span id="p-details-alt"> Art is </span>
+        synonymous with sculptures, portraits, and
+        <span id="p-details-alt"> paintings. </span>
+      </p>
+    </div>
+
+    <div id="container-evolve">
+      <h2 id="header-evolve-1"> as the growth of technology continues to accelerate, </h2>
+      <h3 id="header-evolve-2"> ART KEEPS EVOLVING. </h3>
+
+      <div id="container-info">
+        <img id="img-info" src="./img/mobile-phone.png" alt="Phone">
+        <p id="p-info"> it's accessible. </p>
+        <img src="./img/right-arrow.png" alt="Arrow">
+      </div>
+      <div id="container-info">
+        <img id="img-info" src="./img/cursor.png" alt="Cursor">
+        <p id="p-info"> it's engaging. </p>
+        <img src="./img/right-arrow.png" alt="Arrow">
+      </div>
+      <div id="container-info">
+        <img id="img-info" src="./img/people.png" alt="People">
+        <p id="p-info"> ...and more. </p>
+        <img src="./img/right-arrow.png" alt="Arrow">
+      </div>
+
+    </div>
+
+    <div id="container-examples">
+      <h1 id="header-examples"> INTERESTING PIECES </h1>
+      <img src="./img/example-1.png" alt="Flaoting Lines in DeepSpace">
+      <p id="p-description"> "Floating Lines in the DeepSpace" by Miguel Neto & Rodrigo Carvalho </p>
+    </div>
+
+    <div id="container-script">
+      <h2 id="header-script-1"> They say great artists borrow from other artists, so... </h2>
+      <h3 id="header-script-2"> LET'S CREATE OUR OWN MASTERPIECE </h3>
+      
+      <input type="file" id="user-image" name="user-image" accept="image/png, image/jpeg, image/jpg"/>
+      <button id="generate-button"> GENERATE ART </button>
+      <script src="./js/sketch.js"></script>
+    </div>
+
+    <div id="container-footer">
+      <a href="#container-hero"> BACK TO TOP </a>
+    </div>
+  </div>
+</body>
+</html>
