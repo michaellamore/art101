@@ -4,7 +4,7 @@
  * License:   Public Domain
  */
 
-const NUMBER_API = "http://numbersapi.com/random/trivia?json=true";
+const NUMBER_API = "https://numbersapi.com/random/trivia?json=true";
 
 $("#activate").click(getTrivia);
 
