@@ -4,7 +4,7 @@
  * License:   Public Domain
  */
 
-const NUMBER_API = "https://apod.nasa.gov/apod/astropix.html?json=true";
+const NUMBER_API = "https://v2.jokeapi.dev/joke/Any?type=single";
 
 $("#activate").click(getTrivia);
 
@@ -25,7 +25,7 @@ function getTrivia() {
   // data is passed back
   .done(function(data) {
     console.log("Success:", data);
-    let output = `<img id="trivia" src="${data.img}" >`;
+    let output = `<p id="joke"> ${data.joke} </p>`;
     $("#output").html(output);
   })
   // If the request fails
