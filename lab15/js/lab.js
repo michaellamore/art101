@@ -4,7 +4,7 @@
  * License:   Public Domain
  */
 
-const NUMBER_API = "http://numbersapi.com/random/trivia?json=true";
+const NUMBER_API = "https://apod.nasa.gov/apod/astropix.html?json=true";
 
 $("#activate").click(getTrivia);
 
@@ -25,8 +25,7 @@ function getTrivia() {
   // data is passed back
   .done(function(data) {
     console.log("Success:", data);
-    if (typeof data != "object") return console.error ("DATA was not a valid JS object");
-    let output = `<p id="trivia"> ${data.text} </p>`;
+    let output = `<img id="trivia" src="${data.img}" >`;
     $("#output").html(output);
   })
   // If the request fails
