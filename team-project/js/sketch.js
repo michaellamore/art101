@@ -29,7 +29,6 @@ function draw(){
   if (IMAGE == null) { console.log("No image selected"); return }
   IMAGE.resize(MAX_WIDTH, 0);
   createCanvas(IMAGE.width, IMAGE.height);
-  //background(24);
 
   chooseArt();
 }

@@ -1,0 +1,24 @@
+.column{
+  padding-right: 100px;
+}
+
+body{
+  background-color: #242424;
+  color: white;
+  font-family: Poppins;
+  margin: 40px;
+}
+
+h1{
+  font-size: 50px;
+}
+h2{
+  font-size: 30px;
+}
+
+section{
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+}
