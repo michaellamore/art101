@@ -17,23 +17,25 @@
   <section id="challenge">
     <div id="challengeContainer">
       <h2> Challenge </h2>
-      <p>  </p>
+      <p> For this lab we are continuing our experiments with using API's to obtain data from online sources, as well as manipulating the provided data into a digestible way so that we can add it onto our HTML webpages. </p>
     </div>
   </section>
 
   <section id="problems">
     <div id="problemsContainer">
       <h2> Problems </h2>
-      <p>   </p>
+      <p> My biggest problem for this lab, as well as the previous lab about API's, was the fact that I was constantly getting CORS errors. I use VS Code instead of Atom because of the ease-of-use, and it was frustrating having to upload things to my Github repo in order to test out my code. I read through Wes' troubleshooting guide for APIs, and turns out it's a very common issue. All I had to do to resolve it, was install a CORS unblocker extension on Google Chrome and it worked much more smoothly.  </p>
     </div>
   </section>
 
   <section id="results">
     <div id="resultsContainer">
       <h2> Results </h2>
-      <p>   </p>
-      <button id="activate">Comic</button>
-      <div id="output"></div>
+      <p> Once you press the button bellow, it'll generate a comic using the XKCD API. Once the comic has been obtained, the button disappears and is replaced by a couple of new buttons. For the bonus task, the "Next button" will swap to the next comic and use ajax to get it from the XKCD comic API, and a similar thing occurs with the "Previous button". I added another button, the "Randomize" button, and it will swap to a completely random comic index and fetch that comic from the API. </p>
+      
+      <div id="output">
+        <button id="activate">Comic</button>
+      </div>
     </div>
   </section>
 </body>
