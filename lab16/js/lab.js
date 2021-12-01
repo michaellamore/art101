@@ -4,7 +4,6 @@
  * License:   Public Domain
  */
 
-
 const MAX_INDEX = 2548;
 let comicIndex;
 
@@ -54,7 +53,6 @@ function getComic() {
       getComic();
     });
     
-
     let comicObj = data;
     let title = `<h2> ${comicObj.title} </h2>`;
     let img = `<img src="${comicObj.img}" alt="${comicObj.alt}" />`;
