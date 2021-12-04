@@ -3,7 +3,7 @@
   --black-color: #242424;
   --dark-color: #404040;
 
-  --header-size: 55px;
+  --header-size: 50px;
   --p-size: 25px;
   --radius: 10px;
 }
@@ -13,7 +13,7 @@
   padding: 0px;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: 'Brandon Grotesque Black', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
