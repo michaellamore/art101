@@ -1,104 +1,106 @@
-let IMAGE;
-const MAX_WIDTH = 500; // Don't make this too large. Bigger = script takes longer
+let maxIterations = 500;
+let multiplier = 0.005;
+let strokeSize = 1;
+let rValue = 255;
+let gValue = 255;
+let bValue = 255;
+let transparency = 50;
+let weight = 1;
 
-$(document).ready(function() {
-  eventUserImage();
-  eventButton();
-});
+const MAX_SIZE = 400;
+let canvas;
+let iterations;
+let xOff;
+let generatingArt;
 
-// Add event that checks when user chooses an image
-function eventUserImage(){
-  $("#user-image").on("change", function (){
-    const reader = new FileReader();
-    reader.readAsDataURL(this.files[0]);
-    $(reader).on("load", function() {
-      IMAGE = loadImage(reader.result);
-    })
+function setup(){
+  $("#clear-button").click(function(){
+    clear();
+    updateValues();
+    setupArt();
+    generateArt();
   })
+  $("#pixelate-button").click(function(){addPixels();})
+  $("#circle-button").click(function(){addCircles();})
+  $("#save-button").click(function(){save("masterpiece.png");})
+
+  canvas = createCanvas(MAX_SIZE,MAX_SIZE);
+  canvas.parent("#p5-container");
+  setupArt();
 }
 
-// Add event that checks button press. Trigger the setup function
-function eventButton(){
-  $("#generate-button").on("click", function(){
-    redraw();
-  });
-}
-
-function setup() { noLoop(); }
 function draw(){
-  if (IMAGE == null) { console.log("No image selected"); return }
-  IMAGE.resize(MAX_WIDTH, 0);
-  createCanvas(IMAGE.width, IMAGE.height);
-
-  chooseArt();
+  generateArt();
 }
 
-// Generate a random number
-function genNum(min, max, int=false){
-  let num = random(min, max);
-  if (int == false) { return num; }
-  return floor(num);
+function setupArt(){
+  noiseSeed(random(100));
+  background("#242424");
+  strokeWeight(strokeSize);
+  noFill();
+
+  iterations = 0;
+  xOff = 0;
+  generatingArt = true;
 }
 
-function artPointillism(){
-  console.log("artPointillism is called");
-  const SCALE = genNum(4, 20);
-  for(let x = 0; x < IMAGE.width; x+=SCALE){
-    for(y = 0; y < IMAGE.height; y+=SCALE){
-      let pixel = IMAGE.get(x, y);
+function generateArt(){
+  if(generatingArt){
+    let x1 = width * noise(xOff + 15);
+    let x2 = width * noise(xOff + 25);
+    let x3 = width * noise(xOff + 35);
+    let x4 = width * noise(xOff + 45);
+    let y1 = height * noise(xOff + 55);
+    let y2 = height * noise(xOff + 65);
+    let y3 = height * noise(xOff + 75);
+    let y4 = height * noise(xOff + 85);
+
+    let r = rValue * noise(xOff + 10);
+    let g = gValue * noise(xOff + 20);
+    let b = bValue * noise(xOff + 30);
+    stroke(r, g, b, transparency);
+
+    bezier(x1, y1, x2, y2, x3, y3, x4, y4);
+    xOff += multiplier;
+    iterations++;
+  }
+
+  if (iterations > maxIterations){
+    generatingArt = false; 
+  }
+}
+
+function updateValues(){
+  maxIterations = $("#iteration-input").val() * 1;
+  multiplier = $("#multiplier-input").val() * .001;
+  strokeSize = $("#size-input").val() * 1;
+  rValue = $("#red-input").val() * 1;
+  gValue = $("#green-input").val() * 1;
+  bValue = $("#blue-input").val() * 1;
+  transparency = $("#transparent-input").val() * 1;
+  weight = $("#weight-input").val() * 1;
+}
+
+function addPixels(){
+  updateValues();
+  for(let x = 0; x < width; x += 20){
+    for(y = 0; y < height; y += 20){
+      let pixel = canvas.get(x, y);
       stroke(color(pixel));
-      strokeWeight(SCALE);
-      point(x, y);
+      strokeWeight(weight);
+      rect(x, y, 15, 15)
     }
   }
 }
 
-function artPixelate(){
-  console.log("artPixelate is called");
-  const SCALE = genNum(5, 15);
-  for(let x = 0; x < IMAGE.width; x+=SCALE){
-    for(y = 0; y < IMAGE.height; y+=SCALE){
-      let pixel = IMAGE.get(x, y);
-      fill(color(pixel));
-      rect(x, y, SCALE, SCALE)
-    }
-  }
-}
-
-function artRectangles(){
-  console.log("artRectangles is called");
-  const SCALE = genNum(5, 20);
-  for(let x = 0; x < IMAGE.width; x+=SCALE){
-    for(y = 0; y < IMAGE.height; y+=SCALE){
-      let pixel = IMAGE.get(x, y);
-      fill(color(pixel));
-      rect(x, y, SCALE, SCALE/2)
-    }
-  }
-}
-
-function artCurves(){
-  console.log("artCurves is called");
-  const SCALE = genNum(5, 10);
-  for(let x = 0; x < IMAGE.width; x+=SCALE){
-    for(y = 0; y < IMAGE.height; y+=SCALE){
-      let pixel = IMAGE.get(x, y);
-      push();
-      translate(x, y);
-      strokeWeight(genNum(2, SCALE))
+function addCircles(){
+  updateValues();
+  for(let x = 0; x < width; x+=20){
+    for(y = 0; y < height; y+=20){
+      let pixel = canvas.get(x, y);
       stroke(color(pixel));
-      curve(x, y, cos(SCALE), SCALE, sin(SCALE), SCALE, cos(SCALE), SCALE)
-      pop();
+      strokeWeight(weight);
+      ellipse(x, y, 15);
     }
   }
-}
-
-function chooseArt(){
-  let INDEX = genNum(0, 5, true);
-  console.log(INDEX);
-
-  if (INDEX == 0) { artPixelate() }
-  else if (INDEX == 1) { artRectangles() }
-  else if (INDEX == 2) { artCurves() }
-  else { artPointillism() }
 }

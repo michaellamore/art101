@@ -8,23 +8,32 @@
 
   <!-- ========== FONTS & STYLES ========== -->
   <link href="http://fonts.cdnfonts.com/css/brandon-grotesque-regular" rel="stylesheet">
-  <link rel="stylesheet" href="./css/project.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/slideshow.css">
 
-  <!-- ========== jQuery & p5.js ========== -->
+  <!-- ========== jQuery, p5.js, and other scripts ========== -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="./js/p5.js"></script>
+  <script src="/js/p5.js"></script>
+  <script src="/js/slideshow.js" defer></script>
+
 </head>
-
 <body>
-  <div id="container-sections">
-
-    <div id="container-hero">
-      <h1 class="header-hero"> CREATE A MASTERPIECE </h1>
-      <a href="#container-script"> LET'S DO IT </a>
-      <a href="#container-details"> LEARN MORE </a>
+  <!-- ========== HERO ========== -->
+  <div class="base-container hero">
+    <div class="content-container" id="hero">
+      <h1 id="top-header"> CREATE A </h1>
+      <h1> MASTERPIECE </h1>
+      <div class="hero-buttons">
+        <a href="#masterpiece"> LET'S DO IT </a>
+        <a href="#details"> LEARN MORE </a>
+      </div>
     </div>
+  </div>
 
-    <div id="container-details">
+
+  <!-- ========== DETAILS ========== -->
+  <!-- <div class="base-container details">
+    <div class="content-container" id="details">
       <img src="./img/statueOfDavid.svg" alt="Statue of David Vector">
       <p id="p-details">
         <span id="p-details-alt"> Art is </span>
@@ -32,8 +41,12 @@
         <span id="p-details-alt"> paintings. </span>
       </p>
     </div>
+  </div> -->
 
-    <div id="container-evolve">
+
+  <!-- ========== MODULES ========== -->
+  <!-- <div class="base-container modules">
+    <div class="content-container" id="modules">
       <h2 id="header-evolve-1"> as the growth of technology continues to accelerate, </h2>
       <h3 id="header-evolve-2"> ART KEEPS EVOLVING. </h3>
 
@@ -55,24 +68,83 @@
         </div>
       </div>
     </div>
+  </div> -->
 
-    <div id="container-examples">
-      <h1 id="header-examples"> INTERESTING PIECES </h1>
-      <img src="./img/example-1.png" alt="Flaoting Lines in DeepSpace">
-      <p id="p-description"> "Floating Lines in the DeepSpace" by Miguel Neto & Rodrigo Carvalho </p>
+
+  <!-- ========== EXAMPLES ========== -->
+  <div class="base-container examples">
+    <div class="content-container" id="examples">
+      <h1> INTERESTING PIECES </h1>
+
+      <div class="slideshow">
+        <button class="slideshow-button prev"> &#10151 </button> 
+
+        <!-- Changes dynamically through JS -->
+        <img id="slideshow-img">
+
+          <button class="slideshow-button next"> &#10151 </button>  
+      </div>
+
+      <p id="art-caption"></p>
     </div>
+  </div>
 
-    <div id="container-script">
-      <h2 id="header-script-1"> They say great artists borrow from other artists, so... </h2>
-      <h3 id="header-script-2"> LET'S CREATE OUR OWN MASTERPIECE </h3>
+
+  <!-- ========== MASTERPIECE ========== -->
+  <div class="base-container masterpiece">
+    <div class="content-container" id="masterpiece">
+      <h1> CREATE YOUR OWN MASTERPIECE </h1>
       
-      <input type="file" id="user-image" name="user-image" accept="image/png, image/jpeg, image/jpg"/>
-      <button id="generate-button"> GENERATE ART </button>
-      <script src="./js/sketch.js"></script>
-    </div>
+      <div id="p5-container">
+        <div class="p5-controls">
+          <div class="p5-control">
+            <p>Max Iterations: </p> 
+            <input id="iteration-input" type="range" min="1" max="1000" value="500">
+          </div>
+          
+          <div class="p5-control">
+            <p>Multiplier: </p> 
+          <input id="multiplier-input" type="range" min="1" max="20" value="5">
+          </div>
+          <div class="p5-control">
+            <p>Line Size: </p> 
+            <input id="size-input" type="range" min="1" max="10" value="1">
+          </div>
+          <div class="p5-control">
+            <p>Reds: </p> 
+            <input id="red-input" type="range" min="50" max="400" value="255">
+          </div>
+          <div class="p5-control">
+            <p>Greens: </p> 
+            <input id="green-input" type="range" min="50" max="400" value="255">
+          </div>
+          <div class="p5-control">
+            <p>Blues: </p> 
+            <input id="blue-input" type="range" min="50" max="400" value="255">
+          </div>
+          <div class="p5-control">
+            <p>Transparency: </p> 
+            <input id="transparent-input" type="range" min="0" max="255" value="50">
+          </div>
+          
+          <div class="p5-control">
+            <p> Special Effects: </p>
+            <button class="p5-button" id="pixelate-button"> SQUARES </button>
+            <button class="p5-button" id="circle-button"> CIRCLES </button>
+          </div>
 
-    <div id="container-footer">
-      <a href="#container-hero"> BACK TO TOP </a>
+          <div class="p5-control">
+            <p>Effect Size: </p> 
+            <input id="weight-input" type="range" min="1" max="10" value="1">
+          </div>
+
+          <div class="p5-special-control">
+            <button class="p5-button" id="save-button"> SAVE IMAGE </button>
+            <button class="p5-button" id="clear-button"> RE-GENERATE </button>
+          </div>
+        </div>
+      </div>
+      <script src="./js/sketch.js"></script>
     </div>
   </div>
 </body>

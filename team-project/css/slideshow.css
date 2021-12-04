@@ -1,0 +1,55 @@
+#examples{
+  background: linear-gradient(-45deg, #c64524, #ed7614, #0098dc, #0069aa);
+  background-size: 500% 500%;
+  animation: gradient 20s ease infinite;
+  box-shadow: 0 0 20px black;
+}
+
+#examples > h1, #examples > p{
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(1, 1, 1, 0.5);
+}
+
+.slideshow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 500px;
+  width: 100%;
+}
+
+#slideshow-img{
+  width: 400px;
+  border: 2px solid white;
+  border-radius: var(--radius);
+  box-shadow: 0 0 20px rgba(1, 1, 1, 0.5);
+}
+
+.slideshow-button > img { width: 20px; }
+.slideshow-button.prev { transform: rotate(180deg); }
+
+.slideshow-button{
+  font-size: 40px;
+  width: 50px;
+  height: 60px;
+  color: white;
+  border: white 2px solid;
+  border-radius: 10px;
+  background: none;
+  transition: ease 0.2s;
+}
+
+.slideshow-button:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(1, 1, 1, 0.1);
+}
+.slideshow-button:active{
+  transform: translateY(4px);
+  box-shadow: 0 0 20px rgba(1, 1, 1, 0.1);
+}
+.slideshow-button.prev:active{
+  transform: translateY(4px) rotate(180deg);
+}
